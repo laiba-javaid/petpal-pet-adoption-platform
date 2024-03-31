@@ -105,13 +105,30 @@
         font-size: 3rem;
     }
 }
-h1 {
+.headingFirstSlide {
     color: black;
     font-weight: bolder;
     width: 100%;   
 }
-h1 span{
+.headingFirstSlide span{
     color: #9F522B;
+}
+.carousel-caption .headingSecondSlide {
+    color: #D8CEC8;
+    font-weight: 400;
+    font-size: 3rem;
+     /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis for overflow */
+    max-width: 100%; /* Limit the width */
+    transform: translateX(10%);
+    margin: 100px auto;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange content in a column */
+    align-items: flex-end;
+    text-align: right;
+}
+.carousel-caption .headingSecondSlide span {
+    display: block; /* Display span as block */
 }
 .carousel-caption .carouselPara {
     color: black;
@@ -130,7 +147,7 @@ h1 span{
     cursor: pointer;
     border-color: #9F522B;
 }
-.btn-primary:hover {
+.btn-primary:hover,.btb-primary:focus {
     border-color: #9F522B;
     background-color: #7D3A1D;
 }

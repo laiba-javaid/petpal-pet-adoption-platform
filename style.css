@@ -1,65 +1,9 @@
-
-/* .navbar{
-    background-color: #D8CEC8;
-    margin: 20px;
-    height: 80px;
-    padding: 0.5rem;
-    border-radius: 16px;
-
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.signup-button, .login-button{
-    background-color: #9F522B;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 14px;
-    text-decoration: none;
-    transition: 0.3s background-color;
-}
-.signup-button:hover, .login-button:hover{
-    background-color: #7D3A1D;
-}
-.signup-button{
-    margin-right: 10px;
-}
-.navbar-toggler{
-    border: none;
-    font-size: 1.25rem;
-}
-.navbar-toggler:focus, .btn-close:focus{
-    outline: none;
-    box-shadow: none;
-}
-.nav-link{
-    color: #666777;
-    font-weight: 500;
-    position: relative;
-    text-align: center; 
-}
-.nav-link:hover, .nav-link.active{
-    color: #9F522B;
-}
-.nav-link::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #9F522B;
-    transition: 0.3s ease-in-out;
-    transform: translateX(-50%);
-    visibility: hidden;
-}
-.nav-link:hover::before, .nav-link.active::before{
-    width: 100%;
-    visibility: visible;   
-}
-
-
-
- */
- /* Add or adjust the following CSS rules */
 
 .navbar-nav {
     flex-direction: row;
@@ -74,18 +18,22 @@
     border: none;
     font-size: 1.25rem;
 }
+.navbar-toggler:focus, .btn-close:focus{
+    outline: none;
+    box-shadow: none;
+}
 
-.nav-link {
+.nav-link, .dropdown-item{
     color: #666777;
     font-weight: 500;
 }
 
 .nav-link:hover,
-.nav-link.active {
+.nav-link.active ,.dropdown-item:hover ,.dropdown-item.active{
     color: #9F522B;
 }
 
-.nav-link::before {
+.nav-link::before,.dropdown-item::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -99,9 +47,12 @@
 }
 
 .nav-link:hover::before,
-.nav-link.active::before {
+.nav-link.active::before,.dropdown-item:hover::before,.dropdown-item.active::before {
     width: 100%;
     visibility: visible;
+}
+.dropdown-menu.show {
+    background-color: #D8CEC8; /* Replace with your desired color */
 }
 
 .signup-button,
@@ -124,15 +75,62 @@
     margin-right: 10px;
 }
 
-.nav-link {
-    color: #666777;
+.nav-link, .dropdown-item {
+    color: black;
     font-weight: 500;
     position: relative;
     text-align: center; /* Add text-align center */
 }
 .navbar{
     background-color: #D8CEC8;
-    margin: 10px;
     padding: 0.5rem;
-    border-radius: 16px;
+    min-height: 80px;
+}
+.c-item{
+    height: 600px;
+    padding-top: 100px;
+}
+.c-img{
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 770px) {
+    .carousel-caption {
+        display: block; 
+        position: absolute;
+        transform: translateY(-50%);
+        top: 48%;
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+h1 {
+    color: black;
+    font-weight: bolder;
+    width: 100%;   
+}
+h1 span{
+    color: #9F522B;
+}
+.carousel-caption .carouselPara {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.btn-primary {
+    background-color: #9F522B;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    outline: none;
+    cursor: pointer;
+    border-color: #9F522B;
+}
+.btn-primary:hover {
+    border-color: #9F522B;
+    background-color: #7D3A1D;
 }

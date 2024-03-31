@@ -1,0 +1,138 @@
+
+/* .navbar{
+    background-color: #D8CEC8;
+    margin: 20px;
+    height: 80px;
+    padding: 0.5rem;
+    border-radius: 16px;
+
+}
+.signup-button, .login-button{
+    background-color: #9F522B;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+.signup-button:hover, .login-button:hover{
+    background-color: #7D3A1D;
+}
+.signup-button{
+    margin-right: 10px;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+    outline: none;
+    box-shadow: none;
+}
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+    text-align: center; 
+}
+.nav-link:hover, .nav-link.active{
+    color: #9F522B;
+}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #9F522B;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;   
+}
+
+
+
+ */
+ /* Add or adjust the following CSS rules */
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #9F522B;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #9F522B;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+}
+
+.signup-button,
+.login-button {
+    background-color: #9F522B;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.signup-button:hover,
+.login-button:hover {
+    background-color: #7D3A1D;
+}
+
+.signup-button {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+    text-align: center; /* Add text-align center */
+}
+.navbar{
+    background-color: #D8CEC8;
+    margin: 10px;
+    padding: 0.5rem;
+    border-radius: 16px;
+}

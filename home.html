@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetPal-Pet Adoption Platform</title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <!--NavBar-->
+  <!--NavBar-->
+    <haeder>
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand me-auto" href="#"><img src="/assets/images/PetPal-logo.png" alt="PetPal-logo" width="100px" height="100px"></a>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
@@ -20,7 +23,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-column flex-lg-row justify-content-center flex-lg-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link mx-lg-2 active" aria-current="page" href="/home.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle mx-lg-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,10 +39,10 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  mx-lg-2" href="#">About</a>
+                    <a class="nav-link  mx-lg-2" href="/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  mx-lg-2" href="#">Contact</a>
+                    <a class="nav-link  mx-lg-2" href="/contact.html">Contact</a>
                 </li>
               </ul>
             </div>
@@ -48,10 +51,18 @@
           <a href="#" class="login-button">Login</a>
           <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
+        </button>
+       </div>
+    </nav>
+  </haeder>
     <!--End NavBar-->
+
+
+
+
+
+
+
     <!--Hero Section-->
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -61,17 +72,21 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active c-item" data-bs-interval="10000">
-          <img src="/assets/images/FirstSlide.png" class="d-block w-100 c-img" alt="PetPicture-Adopt don't shop">
-          <div class="carousel-caption d-none d-md-block ">
-          <h1 class="headingFirstSlide display-2 fw-bold">Adopt. <span>Don't Shop.</span></h1>
+
+          <div class="mx-auto">
+            <img src="/assets/images/FirstSlide.png" class="d-block w-100 c-img" alt="PetPicture-Adopt don't shop">
+            <div class="carousel-caption d-md-block">
+            <h1 class="headingFirstSlide  display-2 fw-bold">Adopt. <span>Don't Shop.</span></h1>
             <p class="carouselPara">Find your new furry friend today!</p>
-            <button class="btn btn-primary">Welcome</button>
-        </div>
+              <button class="btn btn-primary">Welcome</button>
+              <p id="welcome-message">Welcome to PetPal! We're glad you're here.</p>
+          </div>
+          </div>      
         </div>
         <div class="carousel-item c-item" data-bs-interval="2000">
           <img src="/assets/images/SecondSlide.png" class="d-block w-100 c-img" alt="PetPicture, asking not only humans need a house ">
           <div class="carousel-caption d-none d-md-block ">
-            <h1 class="headingSecondSlide display-2">Not only people <span>need a house</span></h1>
+            <h1 class="headingSecondSlide display-2">Not only people<span>need a house.</span></h1>
           </div>
         </div>
         <div class="carousel-item c-item">
@@ -96,5 +111,6 @@
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/popper.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/App.js"></script>
 </body>
 </html>

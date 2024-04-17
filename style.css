@@ -216,7 +216,7 @@ html {
     border-color: #9F522B;
     background-color: #7D3A1D;
 }
-.about-section {
+#about-section {
     height: 500px;
     margin: 50px auto;
     margin-top: 100px;
@@ -229,17 +229,17 @@ html {
       
 }
 
-.about-section .container h1{
+#about-section .container h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 100px; 
     color:#9F522B
 }
-.about-section .container p{
+#about-section .container p{
     padding-top: 10px;
 }
-.mission-section {
+#mission-section {
     height: 250px;
     margin: 0 auto;
     padding:0 5px;
@@ -269,7 +269,7 @@ html {
 .card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.values-section .card{
+#values-section .card{
    border-radius: 40px;
    display: flex;
    flex-direction: column;
@@ -280,7 +280,7 @@ html {
    margin-bottom: 50px;
   
 }
-.values-section .card img{
+#values-section .card img{
     width: 70px;
     height: 70px;
     padding-top: 7px;
@@ -295,7 +295,7 @@ html {
     margin: 10px auto;
 
 }
-.team-section .card{
+#team-section .card{
     
     min-height: 400px;
     max-width: 600px;
@@ -306,7 +306,7 @@ html {
     
 }
 
-.team-section .card img{
+#team-section .card img{
     border-radius: 40px;
     display: flex;
     flex-direction: column;
@@ -316,7 +316,7 @@ html {
     align-items: center;
     margin: 20px auto;
 }
-.cta-section .container-fluid h2{
+#cta-section .container-fluid h2{
 color:#9F522B;
 text-align: start;
 }
@@ -388,6 +388,7 @@ text-align: start;
     font-weight: 700;
     color:#9F522B ;
     padding-bottom: 20px;
+    letter-spacing:4px;
 }
 .row .contentWrapper p
 {
@@ -449,6 +450,162 @@ width: 90%;
    
 }
 }
-  
-  
+/* How it Works Section */
+/* Keep your existing CSS */
+
+#how-it-works h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#how-it-works h2 span {
+    color: #9F522B;
+}
+
+.progress-wrapper {
+    position: relative;
+}
+
+#progress-bar-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px; /* Adjust margin-top as needed */
+    position: relative;
+}
+
+#progress-bar-container ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.step {
+    position: relative;
+    flex: 1;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.step.step01 {
+    margin-left: -100px; /* Adjust as needed */
+}
+
+.step.step03 {
+    margin-right: -100px; /* Adjust as needed */
+}
+
+.step-inner {
+    text-align: center;
+}
+
+.step h3 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #9F522B;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: calc(100% - 0.300px); /* Adjust as needed (minus padding on ul element) */
+    height: 3px;
+    background-color: #B8A296;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row; /* Adjusted to column for smaller screens */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line-process {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #7B6457; /* Change color as needed */
+    position: absolute;
+    top: -9px;
+    z-index: 2;
+}
+
+.circle-start {
+    left: 0;
+}
+
+.circle-middle {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle-end {
+    right: 0;
+}
+
+@media (max-width: 768px) {
     
+    #how-it-works h2 {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    #how-it-works h3 {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    #how-it-works p {
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+
+    #progress-bar-container {
+        width: 100%;
+        margin-top: 50px; /* Adjust margin-top as needed */
+    }
+    .line-process {
+        width: 100%;
+        height: auto;
+    }
+
+    .step {
+       
+       
+        position: relative; /* Add relative positioning */
+      
+    }
+
+    .step.step01 {
+        margin-left: -30px; /* Adjust as needed */
+    }
+    .step.step03 {
+        margin-right: -30px; /* Adjust as needed */
+    }
+
+    .circle-start,
+    .circle-end {
+        position: relative;
+        top: 8px;
+        left: auto;
+        right: auto;
+        transform: none;
+        margin-bottom: 20px; /* Adjust as needed */
+    }
+}

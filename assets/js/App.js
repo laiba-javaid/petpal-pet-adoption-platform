@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    console.log("jQuery loaded successfully!");
     //welcome message
     $("#welcome-message").hide();
     $(".btn").click(function(){
@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 
     //Grid animation when hovering over grid items or cards
-    $(".card" ).hover(function(){
+    $("#values-section .card, #team-section .card" ).hover(function(){
         $(this).animate({
             height: '+=150px',
             marginTop: '-=15px',       
@@ -32,6 +32,39 @@ $(document).ready(function(){
     }
     );
 
+//Owl Carousel Card Slider hover effect
+$("#pet-gallery .card").hover(function(){
+    // This will be executed when the mouse enters the element
+    $(this).css({
+        "box-shadow": "0px 4px 0px rgba(0, 0, 0, 0.05)",
+        "transform": "translateY(-10px)",
+        "cursor": "pointer"
+    });
+    $(this).find(".btn").css({
+        "background-color": "#9F522B",
+        "color": "white",
+        "font-weight": 500,
+        "font-size": "16px",
+        "outline": "#7d3a1d",
+        "border": "2px solid #7d3a1d"
+    });
+}, function(){
+    // This will be executed when the mouse leaves the element
+    $(this).css({
+        "box-shadow": "",
+        "transform": "",
+        "cursor": ""
+    });
+    $(this).find(".btn").css({
+        "background-color": "",
+        "color": "",
+        "font-weight": "",
+        "font-size": "",
+        "outline": "",
+        "border": ""
+    });
+});
+
     //Modal Image Gallery
     $('.c-img').click(function(){
         // Get the source of the clicked image
@@ -43,13 +76,22 @@ $(document).ready(function(){
         // Show the modal
         $('#imageModal').modal('show');
     });
+    //Sigup and Signun button
+    const container = $('#register-container');
+    const registerBtn = $('#register');
+    const loginBtn = $('#login');
+    const signUpPanel = $('.toggle-right');
+    const signInPanel = $('.toggle-left');
 
+    registerBtn.click(function() {
+        container.addClass('active');
+        signUpPanel.addClass('active');
+        signInPanel.removeClass('active');
+    });
 
-    //Adjusting padding top of carousel items
-
-
-
-
-
+    loginBtn.click(function() {
+        container.removeClass('active');
+        signInPanel.addClass('active');
+        signUpPanel.removeClass('active');
+    });
 });
-

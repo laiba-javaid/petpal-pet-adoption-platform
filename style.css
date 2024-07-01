@@ -216,7 +216,7 @@ html {
 }
 /* About Section */
 #about-section{
-    background-image: url('/assets/images/AboutBg.png');
+    background-image: url('/PetPal/assets/images/AboutBg.png');
 }
 #about-section, #contact-section {
     height: 500px;
@@ -240,7 +240,7 @@ html {
 }
 /*Contact Section*/
 #contact-section{
-    background-image: url('/assets/images/contactUsHeaderImg.png');
+    background-image: url('/PetPal/assets/images/contactUsHeaderImg.png');
     margin-bottom: 0;
 }
 #contact-section .container h1{
@@ -475,15 +475,6 @@ text-align: start;
     padding-left: 0px;
     
 }
-    /* .welcome
-    {
-        grid-template-columns: 1fr;
-        padding: 2rem 0;
-    }
-    .contentWrapper
-    {
-        padding-left: 0;
-    } */   
 }
 @media screen and (max-width: 768px)
 {
@@ -953,7 +944,7 @@ i{
     width: 100%;
     outline: none;
 }
-.input-field {
+.input-field  {
     max-width: 380px;
     width: 100%;
     background-color: #f0f0f0;
@@ -1116,7 +1107,7 @@ i{
 .filter-section {
     background-color: #f8f9fa;
     padding: 20px;
-    width: 25%;
+    width: 30%;
     position: fixed;
     height: 700px;
     overflow-y: auto;
@@ -1125,14 +1116,17 @@ i{
     margin-left: 25%;
     padding: 20px;
     height: 100vh;
-    width: 75%;
+    width: 70%;
     overflow-y: auto;
 }
 .main-container {
     height: 100vh;
 }
+.filter-container{
+    background-color:#f8f9fa
+}
 .filter-form{
-	background-color: #F4F4F4; 
+	background-color: #f0f0f0; 
 	padding: 50px;
 	height: 1000px;
 }
@@ -1145,3 +1139,122 @@ i{
     display: flex;
     justify-content: center;
 }
+.form-group{
+    margin: 40px 0;
+    width: 300px;
+
+}
+.form-group select{
+    padding: 20px;
+}
+.form-group input{
+ 
+    outline: none;
+    border: none;
+    height: 50px;
+    line-height: 1;
+    color: black;
+    font-size: 1.1rem;
+    box-shadow:  10px 10px rgba(0, 0, 0, 0.03);
+}
+
+/*Product Details Page*/
+
+.container-fluid .pet-image, .container-fluid .pet-details{
+    padding-top: 40px;
+}
+.pet-image img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.pet-details h2{
+    color: #9F522B;
+}
+.pet-details h4{
+    color:gray;  
+}
+.pet-detail{
+    padding: 20px;
+    margin-left: 100px;
+    align-items: center;
+    align-content: center;
+}
+.description{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    height: 250px;
+    padding: 30px;  
+}
+.description h2{
+    justify-content:left;
+   display: flex;
+   color: #9F522B;
+}
+.pet-detail .btn{
+    display: block;
+    margin: auto;
+    width: 150px;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: center;  
+    font-size: 16px;
+}
+
+/*Adoption Application*/
+#adopt-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+ }
+ #adoption-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ #adoption-form h2 {
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 20px;
+ }
+
+ .form-group {
+    margin: auto;
+    margin-bottom: 40px;
+ }
+ 
+ .form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+ }
+ 
+ .form-group input,
+ .form-group textarea,
+ .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+ }
+ .form-group textarea {
+    resize: vertical;
+ }
+ #adoption-form .btn {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    font-size: 16px;
+ }
+ 

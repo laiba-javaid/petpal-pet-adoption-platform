@@ -54,7 +54,11 @@
                   <a
                     class="nav-link mx-lg-2"
                     aria-current="page"
+<<<<<<< HEAD:about.php
                     href="/PetPal/index.html"
+=======
+                    href="/index.html"
+>>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573:about.html
                     >Home</a
                   >
                 </li>
@@ -69,8 +73,13 @@
                     Adopt a Pet
                   </a>
                   <ul class="dropdown-menu">
+<<<<<<< HEAD:about.php
                     <li><a class="dropdown-item" href="/PetPal/adopt.html">Dogs</a></li>
                     <li><a class="dropdown-item" href="/PetPal/adopt.html">Cats</a></li>           
+=======
+                    <li><a class="dropdown-item" href="/adopt.html">Dogs</a></li>
+                    <li><a class="dropdown-item" href="/adopt.html">Cats</a></li>           
+>>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573:about.html
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -286,7 +295,11 @@
                 we can make a difference in the lives of pets and their new
                 families.
               </p>
+<<<<<<< HEAD:about.php
               <a href="/PetPal/adopt.html" class="btn btn-custom">Adopt a Pet</a>
+=======
+              <a href="/home.html" class="btn btn-custom">Adopt a Pet</a>
+>>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573:about.html
             </div>
           </div>
         </div>

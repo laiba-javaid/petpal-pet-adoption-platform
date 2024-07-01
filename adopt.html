@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt a Pet | PetPal</title>
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand me-auto" href="#"><img src="/assets/images/PetPal-logo.png" alt="PetPal-logo"
+            width="100px" height="100px"></a>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="/assets/images/PetPal-logo.png"
+                alt="PetPal-logo" width="70px" height="70px"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-column flex-lg-row justify-content-center flex-lg-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle mx-lg-2 active" href="/adopt.html" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Adopt a Pet
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/adopt.html">Dogs</a></li>
+                  <li><a class="dropdown-item" href="/adopt.html">Cats</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  mx-lg-2 " href="/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  mx-lg-2 " href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="signup-button">Register</a>
+        <a href="#" class="login-button">Login</a>
+        <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!--  <div class="container-fluid main-container">
+        <div class="row">
+            <div class="col-md-3 filter-section">
+                <h4>Search Filters</h4>
+                <form id="filter-form">
+                    <div class="form-group">
+                        <label for="breed">Breed</label>
+                        <input type="text" class="form-control" id="breed" placeholder="Enter breed">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="text" class="form-control" id="age" placeholder="Enter age">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="Enter color">
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Size</label>
+                        <input type="text" class="form-control" id="size" placeholder="Enter size">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <div class="col-md-9 pets-section">
+                <h4>Available Pets</h4>
+                <div class="row" id="pets-list">
+                    Pet cards will be dynamically inserted here
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="filter-form col-lg-3 ">
+
+        </div>
+        
+
+        <div class="col-lg-9" style="padding-left: 30px;">
+        
+
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 17rem">
+                <img src="/assets/images/cardImage1.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Max</h5>
+                  <p>Age: 7 Years</p>
+                  <a href="#" class="btn btn-custom">Adopt Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 17rem">
+                <img src="/assets/images/cardImage2.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Rocky</h5>
+                  <p>Age: 4 Years</p>
+                  <a href="#" class="btn btn-custom">Adopt Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 17rem">
+                <img src="/assets/images/cardImage3.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Charlie</h5>
+                  <p>Age: 1 Year</p>
+                  <a href="#" class="btn btn-custom">Adopt Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 17rem">
+                <img src="/assets/images/cardImage4.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Bella</h5>
+                  <p>Age: 10 Years</p>
+                  <a href="#" class="btn btn-custom">Adopt Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 17rem">
+                <img src="/assets/images/cardImage5.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Coco</h5>
+                  <p>Age: 5 Years</p>
+                  <a href="#" class="btn btn-custom">Adopt Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 17rem">
+                <img src="/assets/images/cardImage6.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Maggie</h5>
+                  <p>Age: 9 Years</p>
+                  <a href="#" class="btn btn-custom">Adopt Now</a>
+                </div>
+              </div>
+            </div>                      
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+    </div>
+    <!-- Sorting by <div class="row"> -->
+
+
+
+    </div>
+    <!--END  <div class="col-lg-9">-->
+
+    </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

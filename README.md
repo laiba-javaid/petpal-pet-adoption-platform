@@ -14,7 +14,7 @@ PetPal is a comprehensive pet adoption platform designed to facilitate the adopt
 - Improving adopt pet page,
 - Working on login and registration pages authentication
 
-## Index Page
+## Home Page Image
 Here is a screenshot of the `index.php` page:
-
+![Home Page Image](assets/images/index.php.png)
 

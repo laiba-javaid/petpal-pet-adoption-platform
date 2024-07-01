@@ -64,7 +64,7 @@
                   <a
                     class="nav-link mx-lg-2 active"
                     aria-current="page"
-                    href="/PetPal/index.html"
+                    href="/PetPal/index.php"
                     >Home</a
                   >
                 </li>
@@ -79,20 +79,20 @@
                     Adopt a Pet
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/PetPal/adopt.html">Dogs</a></li>
-                    <li><a class="dropdown-item" href="/PetPal/adopt.html">Cats</a></li>
+                    <li><a class="dropdown-item" href="/PetPal/adopt.php">Dogs</a></li>
+                    <li><a class="dropdown-item" href="/PetPal/adopt.php">Cats</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/PetPal/about.html">About</a>
+                  <a class="nav-link mx-lg-2" href="/PetPal/about.php">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/PetPal/contact.html">Contact</a>
+                  <a class="nav-link mx-lg-2" href="/PetPal/contact.php">Contact</a>
                 </li>
               </ul>
             </div>
           </div>
-          <a href="/PetPal/register.html" class="signup-button">Register</a>
+          <a href="/PetPal/register.php" class="signup-button">Register</a>
           <!-- <a href="" class="login-button">Login</a> -->
           <button
             class="navbar-toggler pe-0"

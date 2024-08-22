@@ -210,17 +210,16 @@ html {
     cursor: pointer;
     border-color: #9F522B;
 }
+
 .btn-custom:hover,.btn-custom:focus{
     border-color: #9F522B;
     background-color: #7D3A1D;
 }
 /* About Section */
 #about-section{
-<<<<<<< HEAD
+
     background-image: url('/PetPal/assets/images/AboutBg.png');
-=======
-    background-image: url('/assets/images/AboutBg.png');
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573
+
 }
 #about-section, #contact-section {
     height: 500px;
@@ -242,13 +241,13 @@ html {
 #about-section .container p{
     padding-top: 10px;
 }
+
+#cta-section{
+ margin-bottom: 200px;  
+}
 /*Contact Section*/
 #contact-section{
-<<<<<<< HEAD
     background-image: url('/PetPal/assets/images/contactUsHeaderImg.png');
-=======
-    background-image: url('/assets/images/contactUsHeaderImg.png');
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573
     margin-bottom: 0;
 }
 #contact-section .container h1{
@@ -952,11 +951,10 @@ i{
     width: 100%;
     outline: none;
 }
-<<<<<<< HEAD
-.input-field  {
-=======
+
+
 .input-field {
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573
+
     max-width: 380px;
     width: 100%;
     background-color: #f0f0f0;
@@ -1119,11 +1117,8 @@ i{
 .filter-section {
     background-color: #f8f9fa;
     padding: 20px;
-<<<<<<< HEAD
     width: 30%;
-=======
     width: 25%;
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573
     position: fixed;
     height: 700px;
     overflow-y: auto;
@@ -1132,26 +1127,21 @@ i{
     margin-left: 25%;
     padding: 20px;
     height: 100vh;
-<<<<<<< HEAD
     width: 70%;
-=======
     width: 75%;
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573
     overflow-y: auto;
 }
 .main-container {
     height: 100vh;
 }
-<<<<<<< HEAD
+
 .filter-container{
     background-color:#f8f9fa
 }
-.filter-form{
-	background-color: #f0f0f0; 
-=======
+
 .filter-form{
 	background-color: #F4F4F4; 
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573
+
 	padding: 50px;
 	height: 1000px;
 }
@@ -1164,7 +1154,6 @@ i{
     display: flex;
     justify-content: center;
 }
-<<<<<<< HEAD
 .form-group{
     margin: 40px 0;
     width: 300px;
@@ -1284,5 +1273,3 @@ i{
     font-size: 16px;
  }
  
-=======
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573

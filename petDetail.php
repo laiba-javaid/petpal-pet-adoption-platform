@@ -32,7 +32,7 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="/PetPal/adopt.html">Dogs</a></li>
-                      <li><a class="dropdown-item" href="/adopt.html">Cats</a></li>
+                      <li><a class="dropdown-item" href="/PetPal/adopt.html">Cats</a></li>
     
                     </ul>
                   </li>

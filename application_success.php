@@ -39,7 +39,7 @@
 </head>
 <body>
 <div class="image-wrapper">
-        <a class="paw" href="index.html">
+        <a class="paw" href="/PetPal/index.php">
             <img src="/PetPal/assets/images/PetPal-logo.png" style="margin-top: 40px; margin-bottom: 40px;" alt="PetPal">
         </a>
     </div>
@@ -47,7 +47,7 @@
         <div>
             <section class="success-section">
                 <h2>Your Application Was Received!</h2>
-                <p>Return back to &nbsp;<a href="index.html">Home Page</a></p>
+                <p>Return back to &nbsp;<a href="/PetPal/index.php">Home Page</a></p>
             </section>
         </div>
 </body>

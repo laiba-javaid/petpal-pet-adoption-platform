@@ -15,98 +15,9 @@
   <body>
     <!--NavBar-->
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-          <a class="navbar-brand me-auto" href="#"
-            ><img
-              src="/PetPal/assets/images/PetPal-logo.png"
-              alt="PetPal-logo"
-              width="100px"
-              height="100px"
-          /></a>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img
-                  src="/PetPal/assets/images/PetPal-logo.png"
-                  alt="PetPal-logo"
-                  width="70px"
-                  height="70px"
-                />
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul
-                class="navbar-nav flex-column flex-lg-row justify-content-center flex-lg-grow-1 pe-3"
-              >
-                <li class="nav-item">
-                  <a
-                    class="nav-link mx-lg-2"
-                    aria-current="page"
-<<<<<<< HEAD:about.php
-                    href="/PetPal/index.html"
-=======
-                    href="/index.html"
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573:about.html
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle mx-lg-2"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Adopt a Pet
-                  </a>
-                  <ul class="dropdown-menu">
-<<<<<<< HEAD:about.php
-                    <li><a class="dropdown-item" href="/PetPal/adopt.html">Dogs</a></li>
-                    <li><a class="dropdown-item" href="/PetPal/adopt.html">Cats</a></li>           
-=======
-                    <li><a class="dropdown-item" href="/adopt.html">Dogs</a></li>
-                    <li><a class="dropdown-item" href="/adopt.html">Cats</a></li>           
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573:about.html
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2 active" href="/PetPal/about.html"
-                    >About</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/PetPal/contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <a href="#" class="signup-button">Register</a>
-          <a href="#" class="login-button">Login</a>
-          <button
-            class="navbar-toggler pe-0"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
+    <header>
+    <?php include 'includes/header.php'; ?>
+    </header>
     </header>
 
 
@@ -295,19 +206,17 @@
                 we can make a difference in the lives of pets and their new
                 families.
               </p>
-<<<<<<< HEAD:about.php
-              <a href="/PetPal/adopt.html" class="btn btn-custom">Adopt a Pet</a>
-=======
-              <a href="/home.html" class="btn btn-custom">Adopt a Pet</a>
->>>>>>> 65e4cbfb89f786019c3851dcbe568c2d73cbb573:about.html
+
+              <a href="/PetPal/adopt.php" class="btn btn-custom">Adopt a Pet</a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-
-
+    <footer class="footer">
+      <?php include 'includes/footer.php'; ?>
+    </footer>
     <!--JQuery Link-->
     <script src="/PetPal/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/PetPal/assets/js/popper.min.js"></script>

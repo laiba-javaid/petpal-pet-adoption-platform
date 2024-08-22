@@ -8,16 +8,12 @@
   <link href="/PetPal/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="/PetPal/style.css" />
-
 </head>
 
 <body>
   <header>
-  <header>
     <?php include 'includes/header.php'; ?>
     </header>
-  </header>
-
   <section class="page-section">
     <div class="container">
       <div class="row">
@@ -32,7 +28,6 @@
                   <option value="cat">Cat</option>
                   <option value="dog">Dog</option>
                 </select>
-
               </div>
               <div class="form-group">
                 <label for="name">Name</label>
@@ -84,7 +79,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Max</h5>
                   <p>Age: 7 Years</p>
-                  <a href="/PetPal/petDetail.html" class="btn btn-custom">Adopt Now</a>
+                  <a href="/PetPal/petDetail.php" class="btn btn-custom">Adopt Now</a>
                 </div>
               </div>
             </div>

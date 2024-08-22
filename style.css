@@ -242,9 +242,7 @@ html {
     padding-top: 10px;
 }
 
-#cta-section{
- margin-bottom: 200px;  
-}
+
 /*Contact Section*/
 #contact-section{
     background-image: url('/PetPal/assets/images/contactUsHeaderImg.png');
@@ -827,11 +825,6 @@ i{
 }
 
 /*Footer Section*/
-.footer .container-fluid {
-    background-color: #D8CEC8;
-    margin-top: 0; 
-    
-}
 
 .footer .container-fluid h3 {
     color: #7D3A1D;
@@ -1114,21 +1107,11 @@ i{
 .page-section{
 	padding: 10rem 0;
 }
-.filter-section {
-    background-color: #f8f9fa;
-    padding: 20px;
-    width: 30%;
-    width: 25%;
-    position: fixed;
-    height: 700px;
-    overflow-y: auto;
-}
 .pets-section {
     margin-left: 25%;
     padding: 20px;
     height: 100vh;
     width: 70%;
-    width: 75%;
     overflow-y: auto;
 }
 .main-container {
@@ -1141,7 +1124,6 @@ i{
 
 .filter-form{
 	background-color: #F4F4F4; 
-
 	padding: 50px;
 	height: 1000px;
 }
@@ -1154,24 +1136,10 @@ i{
     display: flex;
     justify-content: center;
 }
-.form-group{
-    margin: 40px 0;
-    width: 300px;
 
-}
-.form-group select{
-    padding: 20px;
-}
-.form-group input{
- 
-    outline: none;
-    border: none;
-    height: 50px;
-    line-height: 1;
-    color: black;
-    font-size: 1.1rem;
-    box-shadow:  10px 10px rgba(0, 0, 0, 0.03);
-}
+
+
+
 
 /*Product Details Page*/
 

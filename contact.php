@@ -12,11 +12,10 @@
     <link rel="stylesheet" href="/PetPal/style.css" />
 </head>
 <body>
-    <header>
+    
     <header>
     <?php include 'includes/header.php'; ?>
-    </header> 
-       </header> 
+    </header>  
        <main>
         <!--Contact Us Header Img Section-->
         <section id="contact-section">

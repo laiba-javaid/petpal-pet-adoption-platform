@@ -13,7 +13,7 @@
 <body>
   <header>
     <?php include 'includes/header.php'; ?>
-    </header>
+  </header>
   <section class="page-section">
     <div class="container">
       <div class="row">

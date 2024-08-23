@@ -14,6 +14,7 @@
     </style>
 </head>
 <body>
+    
     <section id="adopt-section">
     <div id="adoption-form">
         <h2>Adoption Application</h2>

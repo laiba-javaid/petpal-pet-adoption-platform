@@ -94,4 +94,9 @@ $("#pet-gallery .card").hover(function(){
         signInPanel.addClass('active');
         signUpPanel.removeClass('active');
     });
+
+   
+            
+           
+       
 });

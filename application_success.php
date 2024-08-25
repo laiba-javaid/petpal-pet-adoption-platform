@@ -46,9 +46,25 @@
     <main>
         <div>
             <section class="success-section">
-                <h2>Your Application Was Received!</h2>
-                <p>Return back to &nbsp;<a href="/PetPal/index.php">Home Page</a></p>
+                <?php
+                if (isset($_GET['type']) && isset($_GET['role'])) {
+                    $type = htmlspecialchars($_GET['type']);
+                    $role = htmlspecialchars($_GET['role']);
+                    
+                    if ($type === 'signup' && $role === 'user') {
+                        echo "<h2>Account Created Successfully!</h2>";
+                        echo "<p>Return back to &nbsp;<a href='/PetPal/index.php'>Home Page</a></p>";
+                    } elseif ($type === 'login' && $role === 'user') {
+                        echo "<h2>Login Successful!</h2>";
+                        echo "<p>Return back to &nbsp;<a href='/PetPal/index.php'>Home Page</a></p>";
+                    } elseif ($type === 'login' && $role === 'admin') {
+                        echo "<h2>Login Successful!</h2>";
+                        echo "<p>Go to your &nbsp;<a href='/PetPal/admin_dashboard.php'>Dashboard</a></p>";
+                    }
+                }
+                ?>
             </section>
         </div>
+    </main>
 </body>
 </html>

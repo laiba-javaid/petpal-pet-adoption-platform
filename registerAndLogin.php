@@ -14,13 +14,18 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+
+
 
   </head>
   <body>
     <section id="register-section">
       <div class="register-container" id="register-container">
         <div class="form-container sign-up">
-          <form action="process_signup.php" method="post">
+          <form id="signupForm" action="process_signup.php" method="post">
             <h2>Create Account</h2>
             <div class="social-icons">
               <a href="#" class="icon"
@@ -44,7 +49,7 @@
           </form>
         </div>
         <div class="form-container sign-in">
-          <form  action="process_login.php" method="post">
+          <form id="loginForm" action="process_login.php"  method="post">
             <h2>Sign In</h2>
             <div class="social-icons">
               <a href="#" class="icon"
@@ -84,10 +89,10 @@
         </div>
       </div>
     </section>
+   
 
-    <script src="/PetPal/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/PetPal/assets/js/popper.min.js"></script>
-    <script src="/PetPal/assets/js/bootstrap.min.js"></script>
+
+    
     <script src="/PetPal/assets/js/App.js"></script>
    
   </body>

@@ -1,40 +1,52 @@
 <?php
 session_start();
-include 'db_connection.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+// Include your database connection file
+require_once 'db_connection.php';
 
-    $sql = "SELECT id, username, password, role FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt->store_result();
+// Assume you have form fields named 'email' and 'password'
+$email = $_POST['email'] ?? '';
+$password = $_POST['password'] ?? '';
 
-    if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $username, $hashed_password, $role);
-        $stmt->fetch();
+// Query the database to check if the email and password are correct
+$query = "SELECT * FROM users WHERE email = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
 
-        if (password_verify($password, $hashed_password)) {
-            // Start the session and set session variables
-            session_start();
-            $_SESSION['username'] = $username;
-            $_SESSION['role'] = $role;
+if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
 
-            if ($user_type === 'admin') {
-                header("Location: /admin_dashboard.php"); // Redirect to admin dashboard
-            } else {
-                header("Location: /PetPal/index.php"); // Redirect to user dashboard
-            }
+    // Assuming the password is hashed, use password_verify
+    if (password_verify($password, $user['password'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $role = $user['role']; // Assume 'role' is a column in your 'users' table
+        
+        // Determine redirect URL based on role
+        if ($role === 'admin') {
+            $redirectUrl = 'application_success.php?type=login&role=admin';
         } else {
-            echo "Invalid password!";
+            $redirectUrl = 'application_success.php?type=login&role=user';
         }
+        
+        // Redirect to the success page
+        header("Location: $redirectUrl");
+        exit();
     } else {
-        echo "No user found with that email!";
+        // Incorrect password
+        $redirectUrl = 'application_success.php?type=login&role=none'; // No role or invalid credentials
+        header("Location: $redirectUrl");
+        exit();
     }
-
-    $stmt->close();
+} else {
+    // User not found
+    $redirectUrl = 'application_success.php?type=login&role=none'; // No role or invalid credentials
+    header("Location: $redirectUrl");
+    exit();
 }
+
+// Close the statement and connection
+$stmt->close();
 $conn->close();
 ?>

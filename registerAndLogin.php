@@ -20,7 +20,7 @@
     <section id="register-section">
       <div class="register-container" id="register-container">
         <div class="form-container sign-up">
-          <form>
+          <form action="process_signup.php" method="post">
             <h2>Create Account</h2>
             <div class="social-icons">
               <a href="#" class="icon"
@@ -35,16 +35,16 @@
               ></a>
             </div>
             <span>or use your email for registeration</span>
-            <div class="input-field"><i class="fa fa-user" aria-hidden="true"></i><input type="text" placeholder="Name" /></div>
+            <div class="input-field"><i class="fa fa-user" aria-hidden="true"></i><input type="text" name="username" placeholder="Name" /></div>
             
             <div class="input-field"><i class="fa fa-envelope" aria-hidden="true"></i>
-              <input type="email" placeholder="Email" /></div>
-            <div class="input-field"><i class="fa fa-lock" aria-hidden="true"></i><input type="password" placeholder="Password" /></div>
+              <input type="email" name="email" placeholder="Email" /></div>
+            <div class="input-field"><i class="fa fa-lock" aria-hidden="true"></i><input type="password" name="password" placeholder="Password" /></div>
             <button>Sign Up</button>
           </form>
         </div>
         <div class="form-container sign-in">
-          <form>
+          <form  action="process_login.php" method="post">
             <h2>Sign In</h2>
             <div class="social-icons">
               <a href="#" class="icon"
@@ -60,8 +60,8 @@
             </div>
             <span>or use your email password</span>
             <div class="input-field"><i class="fa fa-envelope" aria-hidden="true"></i>
-              <input type="email" placeholder="Email" /></div>           
-            <div class="input-field"><i class="fa fa-lock" aria-hidden="true"></i><input type="password" placeholder="Password" /></div>
+              <input type="email" name="email" placeholder="Email" /></div>           
+            <div class="input-field"><i class="fa fa-lock" aria-hidden="true"></i><input type="password" name="password" placeholder="Password" /></div>
             <a href="#">Forget Your Password?</a>
             <button>Sign In</button>
           </form>

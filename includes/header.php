@@ -33,7 +33,7 @@
         </ul>
       </div>
     </div>
-    <a href="/PetPal/register.php" class="signup-button">Register</a>
+    <a href="/PetPal/registerAndLogin.php" class="signup-button">Register</a>
     <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

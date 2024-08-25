@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $stmt->bind_param("ssssss", $name, $email, $phone, $address, $petname, $reason);
             if ($stmt->execute()) {
-                header('Location: application_success.html');
+                header('Location: application_success.php');
             } else {
                 echo "Error executing query: " . $stmt->error;
             }

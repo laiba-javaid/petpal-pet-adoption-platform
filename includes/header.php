@@ -12,18 +12,19 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav flex-column flex-lg-row justify-content-center flex-lg-grow-1 pe-3">
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link mx-lg-2 <?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>" href="/PetPal/index.php">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mx-lg-2 <?= basename($_SERVER['PHP_SELF']) == 'adopt.php' ? 'active' : ''; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Adopt a Pet
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/PetPal/adopt.php">Dogs</a></li>
-              <li><a class="dropdown-item" href="/PetPal/adopt.php">Cats</a></li>
-            </ul>
-          </li>
+    <a class="nav-link dropdown-toggle mx-lg-2 <?= basename($_SERVER['PHP_SELF']) == 'adopt.php' ? 'active' : ''; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Adopt a Pet
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/PetPal/adopt.php?pet-type=dog">Dogs</a></li>
+        <li><a class="dropdown-item" href="/PetPal/adopt.php?pet-type=cat">Cats</a></li>
+    </ul>
+         </li>
+
           <li class="nav-item">
             <a class="nav-link mx-lg-2 <?= basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>" href="/PetPal/about.php">About</a>
           </li>

@@ -95,7 +95,17 @@ $("#pet-gallery .card").hover(function(){
         signUpPanel.removeClass('active');
     });
 
-   
+    $('#filter-form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'filter_pets.php',
+            method: 'GET',
+            data: $(this).serialize(),
+            success: function(data) {
+                $('.row').html(data);
+            }
+        });
+    });
             
            
        

@@ -1240,4 +1240,7 @@ i{
     cursor: pointer;
     font-size: 16px;
  }
- 
+ .text-center {
+    text-align: center !important;
+}
+

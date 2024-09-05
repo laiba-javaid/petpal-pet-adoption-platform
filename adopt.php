@@ -8,6 +8,22 @@
   <link href="/PetPal/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="/PetPal/style.css" />
+  <style>
+    .pet-listing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-listing-container .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pet-listing-container .col-md-4 {
+    margin-bottom: 20px;
+}
+
+  </style>
 </head>
 
 <body>
@@ -19,19 +35,20 @@
       <div class="row">
         <div class="filter-container col-lg-3 ">
           <div>
-            <h4 style="margin-top: 30px; text-align: center;">Search Filters</h4>
+            <h4 style="margin: 30px auto; text-align: center;">Search Filters</h4>
             <form id="filter-form">
+              <!-- Filter form fields here -->            
               <div class="form-group">
                 <label for="pet-type">Pet Type</label>
                 <select class="form-control" name="pet-type" id="pet-type">
                   <option value="">Select Pet Type</option>
-                  <option value="cat">Cat</option>
-                  <option value="dog">Dog</option>
+                  <option value="cat" <?= isset($_GET['pet-type']) && $_GET['pet-type'] == 'cat' ? 'selected' : ''; ?>>Cat</option>
+                  <option value="dog" <?= isset($_GET['pet-type']) && $_GET['pet-type'] == 'dog' ? 'selected' : ''; ?>>Dog</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
               </div>
               <div class="form-group">
                 <label for="breed">Breed</label>
@@ -56,7 +73,7 @@
               </div>
               <div class="form-group">
                 <label for="age">Age</label>
-                <select class="form-control" id="age">
+                <select class="form-control" id="age" name="age">
                   <option value="">Select age range</option>
                   <option value="1-5">1-5</option>
                   <option value="6-10">6-10</option>
@@ -65,97 +82,109 @@
               </div>
               <div class="form-group">
                 <label for="color">Color</label>
-                <input type="text" class="form-control" id="color" placeholder="Enter color">
+                <input type="text" class="form-control" id="color" name="color" placeholder="Enter color">
+              </div>  
+              <div class="text-center">
+              &nbsp&nbsp&nbsp<button type="submit" class="btn btn-custom" style="font-size: 18px; padding: 10px 24px; margin: auto;  color: white; border: none; border-radius: 25px; cursor: pointer;">Search</button>      
               </div>
             </form>
           </div>
         </div>
 
-        <div class="col-lg-9" style="padding-left: 30px;">
+        <div class="pet-listing-container col-lg-9" style="padding-left: 30px;">
           <div class="row">
-            <div class="col">
-              <div class="card" style="width: 17rem">
-                <img src="/PetPal/assets/images/cardImage1.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Max</h5>
-                  <p>Age: 7 Years</p>
-                  <a href="/PetPal/petDetail.php" class="btn btn-custom">Adopt Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 17rem">
-                <img src="/PetPal/assets/images/cardImage2.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Rocky</h5>
-                  <p>Age: 4 Years</p>
-                  <a href="/PetPal/application.php" class="btn btn-custom">Adopt Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 17rem">
-                <img src="/PetPal/assets/images/cardImage3.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Charlie</h5>
-                  <p>Age: 1 Year</p>
-                  <a href="/PetPal/application.php" class="btn btn-custom">Adopt Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 17rem">
-                <img src="/PetPal/assets/images/cardImage4.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Bella</h5>
-                  <p>Age: 10 Years</p>
-                  <a href="/PetPal/application.php" class="btn btn-custom">Adopt Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 17rem">
-                <img src="/PetPal/assets/images/cardImage5.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Coco</h5>
-                  <p>Age: 5 Years</p>
-                  <a href="/PetPal/application.php" class="btn btn-custom">Adopt Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="width: 17rem">
-                <img src="/PetPal/assets/images/cardImage6.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Maggie</h5>
-                  <p>Age: 9 Years</p>
-                  <a href="/PetPal/application.php" class="btn btn-custom">Adopt Now</a>
-                </div>
-              </div>
-            </div>
+          <?php
+                        // Include your database connection
+                        include 'db_connection.php';
+
+                        // Check if the type parameter is set, and sanitize it
+                        $type = isset($_GET['type']) ? $_GET['type'] : '';
+
+                     if ($type) {
+                    // Fetch pets of the specified type
+                   $stmt = $conn->prepare("SELECT * FROM pets WHERE pet_type = ?");
+                    $stmt->bind_param("s", $type);
+}                  else {
+                  // Fetch all pets
+                  $stmt = $conn->prepare("SELECT * FROM pets");
+}
+
+$stmt->execute();
+$result = $stmt->get_result();
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<div class="col-md-4">';
+                                echo '<div class="card" style="width: 17rem">';
+                                $imagePath = "/PetPal/assets/images/" . $row['image'];
+                                echo '<img src="' . $imagePath . '" class="card-img-top" alt="' . $row['name'] . '" />';
+                                echo '<div class="card-body">';
+                                echo '<h5 class="card-title">' . $row['name'] . '</h5>';
+                                echo '<p>Age: ' . $row['age'] . ' Years</p>';
+                                echo '<a href="/PetPal/petDetail.php?id=' . $row['id'] . '" class="btn btn-custom">View Details</a>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</div>';
+                            }
+                        } else {
+                            echo '<p>No pets available for adoption at the moment.</p>';
+                        }
+
+                        $stmt->close();
+                        $conn->close();
+          ?>
           </div>
         </div>
       </div>
     </div>
-    <!-- Sorting by <div class="row"> -->
-    </div>
-    <!--END  <div class="col-lg-9">-->
-
-    </div>
-    </div>
   </section>
 
   <footer class="footer">
-      <?php include 'includes/footer.php'; ?>
-    </footer>
-    
+    <?php include 'includes/footer.php'; ?>
+  </footer>
+
+ 
   <script src="/PetPal/assets/js/jquery-3.7.1.min.js"></script>
   <script src="/PetPal/assets/js/popper.min.js"></script>
   <script src="/PetPal/assets/js/bootstrap.min.js"></script>
   <script src="/PetPal/assets/js/App.js"></script>
   <script src="/PetPal/assets/js/owl.carousel.min.js"></script>
+  <script>
+$(document).ready(function() {
+    $('#filter-form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+    url: 'filter_pets.php',
+    method: 'GET',
+    data: $(this).serialize(),
+    success: function(data) {
+        $('.pet-listing-container').html(data);  // Ensure only the pets are updated within the row
+    },
+    error: function() {
+                // Optionally handle errors
+                alert('An error occurred while filtering pets.');
+            }
+});
+    });
+});
 
+</script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

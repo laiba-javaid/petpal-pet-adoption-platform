@@ -34,11 +34,11 @@ if (isset($_GET['color']) && !empty($_GET['color'])) {
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    
     while ($row = $result->fetch_assoc()) {
-        // Build the HTML structure dynamically
-        echo '<div class="col">';
+        echo '<div class="col-md-4">';
         echo '<div class="card" style="width: 17rem">';
-        $imagePath = "/PetPal/assets/images/" . $row['image']; // Use correct column for image filename
+        $imagePath = "/PetPal/assets/images/" . $row['image']; // Correct image path
         echo '<img src="' . $imagePath . '" class="card-img-top" alt="' . $row['name'] . '" />';
         echo '<div class="card-body">';
         echo '<h5 class="card-title">' . $row['name'] . '</h5>';
@@ -48,9 +48,11 @@ if ($result->num_rows > 0) {
         echo '</div>';
         echo '</div>';
     }
+   
 } else {
     echo '<p>No pets match your criteria.</p>';
 }
+
 
 $conn->close();
 ?>

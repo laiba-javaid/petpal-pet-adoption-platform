@@ -17,10 +17,10 @@ function test_input($data) {
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Gather form data and validate
-    if (empty($_POST["name"])) {
+    if (empty($_POST["applicant_name"])) {
         $nameErr = "Name is required";
     } else {
-        $name = test_input($_POST["name"]);
+        $name = test_input($_POST["applicant_name"]);
         if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
             $nameErr = "Only letters and white space allowed";
         }
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If there are no errors, insert data into the database
     if (empty($nameErr) && empty($emailErr) && empty($phoneErr) && empty($addressErr) && empty($petNameErr) && empty($reasonErr)) {
-        $sql = "INSERT INTO adoptionapplication (name, email, phone, address, petname, reason) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO adoptionapplication (applicant_name, email, phone, address, petname, reason) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         if ($stmt === false) {
             echo "Error preparing statement: " . $conn->error;

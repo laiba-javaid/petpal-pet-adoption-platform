@@ -21,7 +21,9 @@ if ($result->num_rows > 0) {
     // Assuming the password is hashed, use password_verify
     if (password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
-        $role = $user['role']; // Assume 'role' is a column in your 'users' table
+        $_SESSION['role'] = $user['role'];
+
+        $role = $user['role']; // Get role from the database
         
         // Determine redirect URL based on role
         if ($role === 'admin') {

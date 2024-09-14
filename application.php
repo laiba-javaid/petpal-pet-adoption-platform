@@ -25,7 +25,7 @@
         <form action="/PetPal/process_adoption.php" method="post">
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="applicant_name" required>
                 <span class="error">* <?php echo $nameErr;?></span>
             </div>
             <div class="form-group">

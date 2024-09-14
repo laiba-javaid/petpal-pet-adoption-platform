@@ -40,12 +40,23 @@
 
             <!-- Breed Filter -->
             <div class="form-group">
-              <label for="breed">Breed</label>
-              <select class="form-control" name="breed" id="breed">
-                <!-- Breed options here -->
-                <option value="">Select Breed</option>
-                <!-- Add your breed options here -->
-              </select>
+            <label for="breed" class="form-label">Breed</label>
+    <select class="form-control" name="breed" id="breed" required>
+        <!-- Breed options here -->
+        <option value="">Select Breed</option>
+        <option value="Persian">Persian</option>
+        <option value="Beagle">Beagle</option>
+        <option value="British Shorthair">British Shorthair</option>
+        <option value="Himalayan">Himalayan</option>
+        <option value="Scottish Fold">Scottish Fold</option>
+        <option value="Shih Tzu">Shih Tzu</option>
+        <option value="Labrador">Labrador</option>
+        <option value="Russian Blue">Russian Blue</option>
+        <option value="Ragdoll">Ragdoll</option>
+        <option value="Boxer">Boxer</option>
+        <option value="Pomeranian">Pomeranian</option>
+        <option value="German Shepherd">German Shepherd</option>
+    </select>
             </div>
 
             <!-- Age Filter -->

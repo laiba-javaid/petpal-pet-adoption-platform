@@ -31,4 +31,4 @@ Here is a screenshot of the `admin_dashboard.php` page:
 ![Dashboard Page Image](assets/images/dashboard.png)
 ## Manage Pets Page Image
 Here is a screenshot of the `manage_pets.php` page:
-![Manage Pets Page Image](assets/images/manage_pets.png)
+![Manage Pets Page Image](assets/images/manage_pets.PNG)

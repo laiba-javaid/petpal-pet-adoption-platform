@@ -3,8 +3,8 @@
 include 'db_connection.php';
 
 // Initialize error variables
-$nameErr = $emailErr = $phoneErr = $addressErr = $petNameErr = $reasonErr = "";
-$name = $email = $phone = $address = $petname = $reason = "";
+$nameErr = $emailErr = $phoneErr = $addressErr = $reasonErr = "";
+$name = $email = $phone = $address = $reason = "";
 
 // Function to sanitize form inputs
 function test_input($data) {
@@ -46,11 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $address = test_input($_POST["address"]);
     }
-    if (empty($_POST["petname"])) { // Fixed the input name
-        $petNameErr = "Pet Name is required";
-    } else {
-        $petname = test_input($_POST["petname"]);
-    }
+   
     if (empty($_POST["reason"])) {
         $reasonErr = "Reason is required";
     } else {
@@ -58,15 +54,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // If there are no errors, insert data into the database
-    if (empty($nameErr) && empty($emailErr) && empty($phoneErr) && empty($addressErr) && empty($petNameErr) && empty($reasonErr)) {
-        $sql = "INSERT INTO adoptionapplication (applicant_name, email, phone, address, petname, reason) VALUES (?, ?, ?, ?, ?, ?)";
+    if (empty($nameErr) && empty($emailErr) && empty($phoneErr) && empty($addressErr) && empty($reasonErr)) {
+        $sql = "INSERT INTO adoptionapplication (applicant_name, email, phone, address, reason) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         if ($stmt === false) {
             echo "Error preparing statement: " . $conn->error;
         } else {
-            $stmt->bind_param("ssssss", $name, $email, $phone, $address, $petname, $reason);
+            $stmt->bind_param("sssss", $name, $email, $phone, $address, $reason);
             if ($stmt->execute()) {
-                header('Location: application_success.php');
+                header('Location: application_success.php?type=applicationSubmitted&role=user');
             } else {
                 echo "Error executing query: " . $stmt->error;
             }
@@ -79,7 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $emailErr . "<br>";
         echo $phoneErr . "<br>";
         echo $addressErr . "<br>";
-        echo $petNameErr . "<br>";
         echo $reasonErr . "<br>";
     }
 }

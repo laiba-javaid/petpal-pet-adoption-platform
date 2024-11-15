@@ -1,3 +1,12 @@
+<?php
+// Check if the 'status' parameter is set in the URL query string
+if (isset($_GET['status']) && $_GET['status'] == 'logged_out') {
+    echo '<div class="alert alert-success" role="alert">
+            You have been logged out successfully.
+          </div>';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

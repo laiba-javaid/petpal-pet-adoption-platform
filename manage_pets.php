@@ -160,7 +160,7 @@
 </div>
 
             <!-- List Pets -->
-            <div class="collapse" id="petList">
+          <div class="collapse" id="petList">
             <div class="my-5">
                 <h2>Pet List</h2>
                 <table class="table table-striped">

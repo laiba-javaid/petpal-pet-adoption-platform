@@ -29,6 +29,8 @@
         .success-section a {
             color: #8B0000;
             text-decoration: none;
+            display: inline;
+            margin-left: 5px; 
         }
         .image-wrapper {
             display: flex;
@@ -60,6 +62,10 @@
                     } elseif ($type === 'login' && $role === 'admin') {
                         echo "<h2>Login Successful!</h2>";
                         echo "<p>Go to your &nbsp;<a href='/PetPal/admin_dashboard.php'>Dashboard</a></p>";
+                    }
+                    elseif ($type === 'applicationSubmitted' && $role === 'user') {
+                        echo "<h2>Application Submitted Successfully!</h2>";
+                        echo "<p>Once it is approved or rejected, you will be notified. Return back to <a href='/PetPal/index.php'>Home Page</a></p>";
                     }
                 }
                 ?>

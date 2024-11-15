@@ -20,7 +20,7 @@
         <h2>Adoption Application</h2>
         <?php
             // Initialize error variables
-            $nameErr = $emailErr = $phoneErr = $addressErr = $petNameErr = $reasonErr = "";
+            $nameErr = $emailErr = $phoneErr = $addressErr = $reasonErr = "";
         ?>
         <form action="/PetPal/process_adoption.php" method="post">
             <div class="form-group">
@@ -42,11 +42,6 @@
                 <label for="address">Address</label>
                 <textarea id="address" name="address" required></textarea>
                 <span class="error">* <?php echo $addressErr;?></span>
-            </div>
-            <div class="form-group">
-                <label for="petname">Name of Pet You Wish to Adopt</label>
-               <input type="text" id="petname" name="petname" required>
-               <span class="error">* <?php echo $petNameErr;?></span>
             </div>
             <div class="form-group">
                 <label for="reason">Reason for Adoption</label>

@@ -148,3 +148,13 @@ margin-top: 20px; /* Adjust spacing as necessary */
     border-color: #2F5D6E;
     color:white;
 }
+.applications-text {
+    font-weight: bold;
+    font-size: 1.2rem; 
+}
+.applications-count {
+    display: block;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    margin-top: 5px; 
+}

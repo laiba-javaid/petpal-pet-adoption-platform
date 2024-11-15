@@ -3,7 +3,7 @@
 include 'db_connection.php';
 
 // Fetch pet data from the database
-$query = "SELECT name, image FROM pets LIMIT 5";
+$query = "SELECT id, name, image FROM pets LIMIT 5";
 $result = mysqli_query($conn, $query);
 
 $pets = [];
@@ -289,36 +289,38 @@ mysqli_close($conn);
 
      <!-- Pet Gallery Section -->
      <section id="pet-gallery">
-        <div class="container">
-          <div class="row">
+       <div class="container">
+        <div class="row">
             <div class="col-lg-12 text-center">
-              <h2>Our Friends</h2>
-              <p>Who are looking for a house</p>
+                <h2>Our Friends</h2>
+                <p>Who are looking for a house</p>
             </div>
             <div class="col-lg-auto custom-width">
-              <div class="owl-carousel slider_carousel">
-                <?php foreach ($pets as $pet) : ?>
-                <div class="card" style="width: 20rem">
-                
-                  <img
-                    src="/PetPal/assets/images/<?php echo htmlspecialchars($pet['image']); ?>"
-                    class="card-img-top"
-                    alt="<?php echo htmlspecialchars($pet['name']); ?>"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title"><?php echo htmlspecialchars($pet['name']); ?></h5>
-                    <a href="#" class="btn btn-custom">Learn More</a>
-                  </div>
+                <div class="owl-carousel slider_carousel">
+                    <?php foreach ($pets as $pet) : ?>
+                    <div class="card" style="width: 20rem">
+                        <img
+                            src="/PetPal/assets/images/<?php echo htmlspecialchars($pet['image']); ?>"
+                            class="card-img-top"
+                            alt="<?php echo htmlspecialchars($pet['name']); ?>"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo htmlspecialchars($pet['name']); ?></h5>
+                            <!-- Corrected href to output the pet ID -->
+                            <a href="/PetPal/petDetail.php?id=<?php echo $pet['id']; ?>" class="btn btn-custom">Learn More</a>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
-                <?php endforeach; ?>
-              </div>
             </div>
             <div>
-              <a href="/PetPal/adopt.php" class="btn btn-custom know-all-pets">Get to know the rest</a>
+                <a href="/PetPal/adopt.php" class="btn btn-custom know-all-pets">Get to know the rest</a>
             </div>
-          </div>
         </div>
-      </section>
+       </div>
+</section>
+
+
 
 
 

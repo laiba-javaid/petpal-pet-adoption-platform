@@ -44,18 +44,54 @@
     <select class="form-control" name="breed" id="breed" required>
         <!-- Breed options here -->
         <option value="">Select Breed</option>
-        <option value="Persian">Persian</option>
-        <option value="Beagle">Beagle</option>
-        <option value="British Shorthair">British Shorthair</option>
-        <option value="Himalayan">Himalayan</option>
-        <option value="Scottish Fold">Scottish Fold</option>
-        <option value="Shih Tzu">Shih Tzu</option>
-        <option value="Labrador">Labrador</option>
-        <option value="Russian Blue">Russian Blue</option>
-        <option value="Ragdoll">Ragdoll</option>
-        <option value="Boxer">Boxer</option>
-        <option value="Pomeranian">Pomeranian</option>
-        <option value="German Shepherd">German Shepherd</option>
+
+        <!-- Cat category -->
+        <optgroup label="Cats">
+            <option value="Persian">Persian</option>
+            <option value="Maine Coon">Maine Coon</option>
+            <option value="Siamese">Siamese</option>
+            <option value="Ragdoll">Ragdoll</option>
+            <option value="Bengal">Bengal</option>
+            <option value="British Shorthair">British Shorthair</option>
+            <option value="Scottish Fold">Scottish Fold</option>
+            <option value="Sphynx">Sphynx</option>
+            <option value="Abyssinian">Abyssinian</option>
+            <option value="American Shorthair">American Shorthair</option>
+            <option value="Burmese">Burmese</option>
+            <option value="Himalayan">Himalayan</option>
+            <option value="Russian Blue">Russian Blue</option>
+            <option value="Norwegian Forest Cat">Norwegian Forest Cat</option>
+            <option value="Oriental Shorthair">Oriental Shorthair</option>
+            <option value="Devon Rex">Devon Rex</option>
+            <option value="Cornish Rex">Cornish Rex</option>
+            <option value="Turkish Angora">Turkish Angora</option>
+            <option value="Balinese">Balinese</option>
+            <option value="Manx">Manx</option>
+        </optgroup>
+
+        <!-- Dog category -->
+        <optgroup label="Dogs">
+            <option value="Labrador Retriever">Labrador Retriever</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="Bulldog">Bulldog</option>
+            <option value="Beagle">Beagle</option>
+            <option value="Poodle">Poodle</option>
+            <option value="Rottweiler">Rottweiler</option>
+            <option value="Siberian Husky">Siberian Husky</option>
+            <option value="Dachshund">Dachshund</option>
+            <option value="Boxer">Boxer</option>
+            <option value="Shih Tzu">Shih Tzu</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Pomeranian">Pomeranian</option>
+            <option value="Great Dane">Great Dane</option>
+            <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+            <option value="Doberman Pinscher">Doberman Pinscher</option>
+            <option value="Australian Shepherd">Australian Shepherd</option>
+            <option value="Cocker Spaniel">Cocker Spaniel</option>
+            <option value="Border Collie">Border Collie</option>
+            <option value="French Bulldog">French Bulldog</option>
+        </optgroup>
     </select>
             </div>
 

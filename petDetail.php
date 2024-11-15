@@ -60,6 +60,10 @@
         </div>
     </div>
 
+    <footer class="footer">
+      <?php include 'includes/footer.php'; ?>
+    </footer>
+
     <script src="/PetPal/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/PetPal/assets/js/popper.min.js"></script>
     <script src="/PetPal/assets/js/bootstrap.min.js"></script>

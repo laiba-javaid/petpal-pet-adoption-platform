@@ -129,9 +129,7 @@
                     loving homes for every pet in need. We recognize the
                     importance of working together with animal shelters, rescue
                     groups, volunteers, and other stakeholders to make a
-                    positive impact on pet adoption and welfare. Together, we
-                    can achieve greater results and create a brighter future for
-                    pets in our community.
+                    positive impact on pet adoption and welfare. 
                   </p>
                 </div>
               </div>

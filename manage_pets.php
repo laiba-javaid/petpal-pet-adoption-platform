@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="dashboard.css">
+    
 </head>
 <body>
     <div class="d-flex">
@@ -46,24 +47,60 @@
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="breed" class="form-label">Breed</label>
-                        <select class="form-control" name="breed" id="breed" required>
-                        <!-- Breed options here -->
-                         <option value="">Select Breed</option>
-                         <option value="Persian">Persian</option>
-                         <option value="Beagle">Beagle</option>
-                         <option value="British Shorthair">British Shorthair</option>
-                         <option value="Himalayan">Himalayan</option>
-                         <option value="Scottish Fold">Scottish Fold</option>
-                         <option value="Shih Tzu">Shih Tzu</option>
-                         <option value="Labrador">Labrador</option>
-                         <option value="Russian Blue">Russian Blue</option>
-                         <option value="Ragdoll">Ragdoll</option>
-                         <option value="Boxer">Boxer</option>
-                         <option value="Pomeranian">Pomeranian</option>
-                         <option value="German Shepherd">German Shepherd</option>
-                        </select>
-                    </div>
+    <label for="breed" class="form-label">Breed</label>
+    <select class="form-control" name="breed" id="breed" required>
+        <!-- Breed options here -->
+        <option value="">Select Breed</option>
+
+        <!-- Cat category -->
+        <optgroup label="Cats">
+            <option value="Persian">Persian</option>
+            <option value="Maine Coon">Maine Coon</option>
+            <option value="Siamese">Siamese</option>
+            <option value="Ragdoll">Ragdoll</option>
+            <option value="Bengal">Bengal</option>
+            <option value="British Shorthair">British Shorthair</option>
+            <option value="Scottish Fold">Scottish Fold</option>
+            <option value="Sphynx">Sphynx</option>
+            <option value="Abyssinian">Abyssinian</option>
+            <option value="American Shorthair">American Shorthair</option>
+            <option value="Burmese">Burmese</option>
+            <option value="Himalayan">Himalayan</option>
+            <option value="Russian Blue">Russian Blue</option>
+            <option value="Norwegian Forest Cat">Norwegian Forest Cat</option>
+            <option value="Oriental Shorthair">Oriental Shorthair</option>
+            <option value="Devon Rex">Devon Rex</option>
+            <option value="Cornish Rex">Cornish Rex</option>
+            <option value="Turkish Angora">Turkish Angora</option>
+            <option value="Balinese">Balinese</option>
+            <option value="Manx">Manx</option>
+        </optgroup>
+
+        <!-- Dog category -->
+        <optgroup label="Dogs">
+            <option value="Labrador Retriever">Labrador Retriever</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="Bulldog">Bulldog</option>
+            <option value="Beagle">Beagle</option>
+            <option value="Poodle">Poodle</option>
+            <option value="Rottweiler">Rottweiler</option>
+            <option value="Siberian Husky">Siberian Husky</option>
+            <option value="Dachshund">Dachshund</option>
+            <option value="Boxer">Boxer</option>
+            <option value="Shih Tzu">Shih Tzu</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Pomeranian">Pomeranian</option>
+            <option value="Great Dane">Great Dane</option>
+            <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+            <option value="Doberman Pinscher">Doberman Pinscher</option>
+            <option value="Australian Shepherd">Australian Shepherd</option>
+            <option value="Cocker Spaniel">Cocker Spaniel</option>
+            <option value="Border Collie">Border Collie</option>
+            <option value="French Bulldog">French Bulldog</option>
+        </optgroup>
+    </select>
+</div>
                     <div class="mb-3">
                         <label for="age" class="form-label">Age</label>
                         <input type="number" class="form-control" id="age" name="age"  min="0" required>
@@ -247,18 +284,53 @@
           <div class="mb-3">
             <label for="edit-pet-breed" class="form-label">Breed</label>
             <select class="form-select" id="edit-pet-breed" name="breed" required>
-              <option value="Persian">Persian</option>
-              <option value="Beagle">Beagle</option>
-              <option value="British Shorthair">British Shorthair</option>
-              <option value="Himalayan">Himalayan</option>
-              <option value="Scottish Fold">Scottish Fold</option>
-              <option value="Shih Tzu">Shih Tzu</option>
-              <option value="Labrador">Labrador</option>
-              <option value="Russian Blue">Russian Blue</option>
-              <option value="Ragdoll">Ragdoll</option>
-              <option value="Boxer">Boxer</option>
-              <option value="Pomeranian">Pomeranian</option>
-              <option value="German Shepherd">German Shepherd</option>              
+              <!-- Cat category -->
+        <optgroup label="Cats">
+            <option value="Persian">Persian</option>
+            <option value="Maine Coon">Maine Coon</option>
+            <option value="Siamese">Siamese</option>
+            <option value="Ragdoll">Ragdoll</option>
+            <option value="Bengal">Bengal</option>
+            <option value="British Shorthair">British Shorthair</option>
+            <option value="Scottish Fold">Scottish Fold</option>
+            <option value="Sphynx">Sphynx</option>
+            <option value="Abyssinian">Abyssinian</option>
+            <option value="American Shorthair">American Shorthair</option>
+            <option value="Burmese">Burmese</option>
+            <option value="Himalayan">Himalayan</option>
+            <option value="Russian Blue">Russian Blue</option>
+            <option value="Norwegian Forest Cat">Norwegian Forest Cat</option>
+            <option value="Oriental Shorthair">Oriental Shorthair</option>
+            <option value="Devon Rex">Devon Rex</option>
+            <option value="Cornish Rex">Cornish Rex</option>
+            <option value="Turkish Angora">Turkish Angora</option>
+            <option value="Balinese">Balinese</option>
+            <option value="Manx">Manx</option>
+        </optgroup>
+
+        <!-- Dog category -->
+        <optgroup label="Dogs">
+            <option value="Labrador Retriever">Labrador Retriever</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="Bulldog">Bulldog</option>
+            <option value="Beagle">Beagle</option>
+            <option value="Poodle">Poodle</option>
+            <option value="Rottweiler">Rottweiler</option>
+            <option value="Siberian Husky">Siberian Husky</option>
+            <option value="Dachshund">Dachshund</option>
+            <option value="Boxer">Boxer</option>
+            <option value="Shih Tzu">Shih Tzu</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Pomeranian">Pomeranian</option>
+            <option value="Great Dane">Great Dane</option>
+            <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+            <option value="Doberman Pinscher">Doberman Pinscher</option>
+            <option value="Australian Shepherd">Australian Shepherd</option>
+            <option value="Cocker Spaniel">Cocker Spaniel</option>
+            <option value="Border Collie">Border Collie</option>
+            <option value="French Bulldog">French Bulldog</option>
+        </optgroup>              
             </select>
           </div>
 
@@ -339,7 +411,7 @@
   </div>
 </div>
 
-    <div class="collapse" id="searchPetsForm">
+  <div class="collapse" id="searchPetsForm">
     <div class="my-5">
         <h2>Search Pets</h2>
         <form action="search_pets.php" method="get">
@@ -349,7 +421,58 @@
             </div>
             <div class="mb-3">
                 <label for="searchBreed" class="form-label">Breed</label>
-                <input type="text" class="form-control" id="searchBreed" name="breed">
+                <select class="form-control" name="breed" id="searchBreed">
+        <!-- Breed options here -->
+        <option value="">Select Breed</option>
+
+        <!-- Cat category -->
+        <optgroup label="Cats">
+            <option value="Persian">Persian</option>
+            <option value="Maine Coon">Maine Coon</option>
+            <option value="Siamese">Siamese</option>
+            <option value="Ragdoll">Ragdoll</option>
+            <option value="Bengal">Bengal</option>
+            <option value="British Shorthair">British Shorthair</option>
+            <option value="Scottish Fold">Scottish Fold</option>
+            <option value="Sphynx">Sphynx</option>
+            <option value="Abyssinian">Abyssinian</option>
+            <option value="American Shorthair">American Shorthair</option>
+            <option value="Burmese">Burmese</option>
+            <option value="Himalayan">Himalayan</option>
+            <option value="Russian Blue">Russian Blue</option>
+            <option value="Norwegian Forest Cat">Norwegian Forest Cat</option>
+            <option value="Oriental Shorthair">Oriental Shorthair</option>
+            <option value="Devon Rex">Devon Rex</option>
+            <option value="Cornish Rex">Cornish Rex</option>
+            <option value="Turkish Angora">Turkish Angora</option>
+            <option value="Balinese">Balinese</option>
+            <option value="Manx">Manx</option>
+        </optgroup>
+
+        <!-- Dog category -->
+        <optgroup label="Dogs">
+            <option value="Labrador Retriever">Labrador Retriever</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="Bulldog">Bulldog</option>
+            <option value="Beagle">Beagle</option>
+            <option value="Poodle">Poodle</option>
+            <option value="Rottweiler">Rottweiler</option>
+            <option value="Siberian Husky">Siberian Husky</option>
+            <option value="Dachshund">Dachshund</option>
+            <option value="Boxer">Boxer</option>
+            <option value="Shih Tzu">Shih Tzu</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Pomeranian">Pomeranian</option>
+            <option value="Great Dane">Great Dane</option>
+            <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+            <option value="Doberman Pinscher">Doberman Pinscher</option>
+            <option value="Australian Shepherd">Australian Shepherd</option>
+            <option value="Cocker Spaniel">Cocker Spaniel</option>
+            <option value="Border Collie">Border Collie</option>
+            <option value="French Bulldog">French Bulldog</option>
+        </optgroup>
+    </select>
             </div>
             <div class="mb-3">
                 <label for="searchType" class="form-label">Type</label>
@@ -364,8 +487,11 @@
     </div>
 </div>
 
-    </div>
-    </div>
+<!-- Container for displaying pet cards -->
+<div id="petCardsContainer" class="row my-5">
+    <!-- Pet cards will be dynamically inserted here -->
+</div>
+
 
 <!-- JavaScript to handle view details functionality -->
     <script>
@@ -395,7 +521,7 @@
           }
         });
       }
-      function editPet(petId) {
+  function editPet(petId) {
   // Use AJAX to fetch pet details
   $.ajax({
     url: 'get_pet_details.php', // PHP file to get pet details
@@ -428,6 +554,82 @@
     }
   });
 }
+
+// Function to handle pet search and display cards
+$(document).ready(function() {
+  $('#searchPetsForm form').submit(function(event) {
+    event.preventDefault(); // Prevent form from submitting the usual way
+
+    // Get form data
+    var searchData = {
+      name: $('#searchName').val(),
+      breed: $('#searchBreed').val(),
+      type: $('#searchType').val(),
+    };
+
+    // Send AJAX request to fetch pets based on search criteria
+    $.ajax({
+      url: 'search_pets.php', // PHP file to handle pet search logic
+      type: 'GET',
+      data: searchData,
+      success: function(response) {
+        var pets = JSON.parse(response); // Assuming your PHP file returns a JSON array
+
+        // Clear any previous results
+        $('#petCardsContainer').empty();
+
+        // Check if there are pets to display
+        if (pets.length > 0) {
+          // Loop through the pets and display them as cards
+          pets.forEach(function(pet) {
+            var petCard = `
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="images/${pet.image}" class="card-img-top" alt="${pet.name}">
+                  <div class="card-body">
+                    <h5 class="card-title">${pet.name}</h5>
+                    <p class="card-text">Breed: ${pet.breed}</p>
+                    <p class="card-text">Age: ${pet.age}</p>
+                    <p class="card-text">Color: ${pet.color}</p>
+                    <p class="card-text">Type: ${pet.pet_type}</p>
+                    <p class="card-text">Gender: ${pet.gender}</p>
+                    <p class="card-text">Size: ${pet.size}</p>
+                    <p class="card-text">Vaccinated: ${pet.vaccinated}</p>
+                    <button class="btn btn-info" onclick="viewPetDetails(${pet.id})">View Details</button>
+                  </div>
+                </div>
+              </div>
+            `;
+            $('#petCardsContainer').append(petCard); // Append the card to the container
+          });
+        } else {
+          $('#petCardsContainer').html('<p>No pets found with the given criteria.</p>');
+        }
+      },
+      error: function(xhr, status, error) {
+        console.error('Error fetching pet data:', error);
+        $('#petCardsContainer').html('<p>Error occurred while searching for pets.</p>');
+      }
+    });
+  });
+});
+
+// Function to handle button clicks and toggle the visibility of sections
+function toggleSection(section) {
+  // Hide all sections first
+  $('#searchPetsForm').addClass('collapse');
+  $('#petCardsContainer').addClass('collapse');
+  
+  // Toggle the clicked section
+  if (section === 'search') {
+    $('#searchPetsForm').removeClass('collapse');
+    $('#petCardsContainer').removeClass('collapse');
+  } else {
+    // Add logic for showing other sections like Add Pet or View Pet List
+    $('#otherSection').removeClass('collapse');
+  }
+}
+
 
 
     </script>
